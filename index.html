@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Geography Work</title>
+  <link rel="icon" type="image/x-icon" href="Favicon.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow-x: hidden;
+      margin: 0;
+      background-position: center top;
+      background-color: #332821;
+      overflow-y: auto;
+    }
+
+    img {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      stroke-opacity: 0;
+      height: 100%;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      max-width: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #climate {
+      background-color: #467A80;
+      border-radius: 7px;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 15px;
+      padding: 7px;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #01141c;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      margin-top: 10px;
+      border-radius: 10px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+  </style>
+</head>
+
+<body>
+  <span style="font-size:30px; cursor:pointer; float: right; position: fixed; margin: 10px;" onclick="openNav()">&#9776;</span>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="Background.svg" download="">- Download</a>
+    <a href="https://hitchinboyscouk-my.sharepoint.com/:p:/g/personal/21smitfr_hitchinboys_co_uk/EaEMYQJeSVpMisOZEYferxABwoByW77lQpWzQtmVv9OI5w?e=RHieWg">- Powerpoint</a>
+    <a href="https://docs.google.com/document/d/1QKIQKESePOnU1FYncdY87k0QD1o2hkIQxZnOpRpfako/edit?usp=sharing">- Our notes</a>
+    <a href="javascript:void(0)" onclick="changeImage()">- Adaption info</a>
+  </div>
+
+  <main>
+    <div id="ForestSection">
+      <img id="backgroundImage" src="Background.svg" draggable="false">
+    </div>
+  </main>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+  
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    function changeImage() {
+      var img = document.getElementById("backgroundImage");
+      if (img.src.includes("Background.svg")) {
+        img.src = "Background2.svg";
+      } else {
+        img.src = "Background.svg";
+      }
+    }
+  </script>
+</body>
+
+</html>
